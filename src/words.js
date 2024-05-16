@@ -1,4 +1,6 @@
 const words = [
+  "cutes",
+  "subbu",
   "abets",
   "abhor",
   "abide",
