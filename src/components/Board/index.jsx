@@ -4,7 +4,7 @@ import words from "../../words";
 
 const correct_words=["cutes","subbu"];
 
-const correct = correct_words[Math.floor(Math.random() * correct_words.length - 1)].toUpperCase();
+const correct = correct_words[Math.floor(Math.random() * (correct_words.length))].toUpperCase();
 // words[Math.floor(Math.random() * words.length - 1)].toUpperCase();
 let defaulBoard = [];
 let defaultLetters = [];
@@ -72,7 +72,8 @@ function Board(props) {
                     if (row === 5) {
                       setLost(true);
                       setTimeout(() => {
-                        setMessage(`It was ${correct}`);
+                        // setMessage(`It was ${correct}`);
+                        setMessage(`Try again :)`);
                       }, 750);
                     }
 
