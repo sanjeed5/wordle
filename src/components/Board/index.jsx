@@ -4,9 +4,8 @@ import words from "../../words";
 
 const correct_words=["cutes","subbu"];
 
-const correct =
-  // words[Math.floor(Math.random() * words.length - 1)].toUpperCase();
-  correct_words[Math.floor(Math.random() * correct_words.length - 1)].toUpperCase();
+const correct = correct_words[Math.floor(Math.random() * correct_words.length - 1)].toUpperCase();
+// words[Math.floor(Math.random() * words.length - 1)].toUpperCase();
 let defaulBoard = [];
 let defaultLetters = [];
 
@@ -88,7 +87,11 @@ function Board(props) {
                   if (correctLetters === 5) {
                     setWin(true);
                     setTimeout(() => {
-                      setMessage("You WIN");
+                      setMessage("You WIN.");
+                      if (window.confirm('Awesome. You won! Click OK to go to find a hidden message :)')) 
+                      {
+                      window.location.href='https://hbd.sanjeed.in/';
+                      };
                     }, 750);
                   }
                   return prevBoard;
